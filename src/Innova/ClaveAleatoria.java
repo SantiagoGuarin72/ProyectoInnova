@@ -14,7 +14,10 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Daniela
+ * @author Daniela  Larrotta y Santiago Guarin 
+ * Junio 28 del 2022
+ * Estructura de datos 
+ * 
  */
 public class ClaveAleatoria extends javax.swing.JFrame {
 
@@ -148,16 +151,16 @@ public class ClaveAleatoria extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ButtonClaveActionPerformed
 
+    // se crea el metodo de generate random password, para clave aleatoria y se conecta con el boton 
     public static String generateRandomPassword(int longitud)
 	{
-		// ASCII range – alphanumeric (0-9, a-z, A-Z)
+		// Caracteres para generar la clave aleatoria(0-9, a-z, A-Z)
 		final String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$%^#$^/&*";
 
 		SecureRandom aleatorio = new SecureRandom();
 		StringBuilder sb = new StringBuilder();
 
-		// each iteration of the loop randomly chooses a character from the given
-		// ASCII range and appends it to the `StringBuilder` instance
+		// se crea un ciclo para poder generar la clave aleatoriamente con  random 
 
 		for (int i = 0; i < longitud; i++)
 		{
@@ -204,6 +207,7 @@ public class ClaveAleatoria extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ClaveAleatoria().setVisible(true);
+
             }
         });
     }
